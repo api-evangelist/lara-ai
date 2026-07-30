@@ -1,19 +1,53 @@
 aid: lara-ai
 name: Lara AI
-description: Lara AI is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Lara AI is an AI agent for People and HR teams, built by SIGMA PEOPLE S.R.L.
+  in Argentina and sold across Latin America. Lara talks to every employee in
+  the messaging tools they already use — WhatsApp, Slack, Microsoft Teams and
+  Google Chat — and covers five modules: Employee Experience (continuous
+  listening, custom surveys and people analytics), Helpdesk (an AI help desk the
+  company says automates over 80% of employee FAQs and requests), Onboarding
+  (end-to-end automated flows for new hires), Comunicaciones (personalised,
+  scheduled and segmented employee communications) and People Analytics
+  (dashboards and reports built from people data). It integrates with HR
+  platforms including SAP, BambooHR, Oracle, Buk, Humand, Mandu and Rex+, and
+  targets retail, consumer goods, technology, consulting, banking and finance,
+  education and manufacturing. Lara AI publishes a marketing site, a Spanish
+  help centre and a real llms.txt, but no public API program — there is no
+  developer portal, API reference, OpenAPI definition or SDK.
 url: https://raw.githubusercontent.com/api-evangelist/lara-ai/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://meetlara.ai/assets/img/lara_visma.avif
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - 500-global
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: enriched
+x-tier-reason: portfolio-lead-no-public-api
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Human Resources
+- Employee Experience
+- People Analytics
+- Onboarding
+- Helpdesk
+- Internal Communications
+- Artificial Intelligence
+- Conversational AI
+- Latin America
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +57,32 @@ maintainers:
 common:
 - type: Website
   url: https://meetlara.ai
+- type: Blog
+  url: https://meetlara.ai/blog/
+- type: Support
+  url: https://help.meetlara.ai/support/home
+- type: Contact
+  url: https://meetlara.ai/contacto
+- type: PrivacyPolicy
+  url: https://meetlara.ai/privacidad
+- type: Login
+  url: https://app.meetlara.ai
+- type: GitHubOrganization
+  url: https://github.com/meetlara
+- type: LinkedIn
+  url: https://www.linkedin.com/company/laraai/
+- type: Instagram
+  url: https://www.instagram.com/meet.lara.ai/
+- type: LLMsTxt
+  url: llms/lara-ai-llms.txt
+- type: Conformance
+  url: conformance/lara-ai-conformance.yml
+- type: Integrations
+  url: integrations/lara-ai-integrations.yml
+- type: DomainSecurity
+  url: security/lara-ai-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
