@@ -1,0 +1,52 @@
+# Lara AI
+
+> AI-powered employee experience platform that helps HR teams automate tasks, measure engagement, and strengthen the relationship with every employee.
+
+Lara AI is the AI agent for People teams. It accompanies every employee throughout their journey, automates key HR processes, and delivers actionable people analytics.
+
+## Modules
+
+### Employee Experience
+Measure engagement and employee experience in real time with continuous listening, custom surveys, and actionable People Analytics.
+- URL: https://meetlara.ai/employee-experience.html
+
+### Helpdesk
+AI-powered help desk that automatically answers employee FAQs and manages requests. Over 80% of queries automated.
+- URL: https://meetlara.ai/helpdesk.html
+
+### Onboarding
+End-to-end automated onboarding flows for new hires: communications, reminders, surveys, and task tracking.
+- URL: https://meetlara.ai/onboarding.html
+
+### Comunicaciones
+Personalized employee communications via WhatsApp, Slack, Teams, and more. Schedule messages, celebrate birthdays, and segment audiences.
+- URL: https://meetlara.ai/comunicaciones.html
+
+### People Analytics
+Turn people data into robust, actionable reports. Custom dashboards for every role, industry, and organization type.
+- URL: https://meetlara.ai/people-analytics.html
+
+## Industries
+
+- Retail: https://meetlara.ai/retail.html
+- Consumer Goods: https://meetlara.ai/consumo-masivo.html
+- Technology: https://meetlara.ai/tecnologia.html
+- Consulting and Agencies: https://meetlara.ai/consultoria-agencias.html
+- Banking and Finance: https://meetlara.ai/banca-finanzas.html
+- Education: https://meetlara.ai/educacion.html
+- Manufacturing: https://meetlara.ai/manufactura.html
+
+## Resources
+
+- Blog: https://meetlara.ai/blog/
+- Success Cases: https://meetlara.ai/success-cases.html
+
+## Contact
+
+- Website: https://meetlara.ai
+- Contact page: https://meetlara.ai/contacto.html
+- LinkedIn: https://www.linkedin.com/company/laraai/
+- Instagram: https://www.instagram.com/meet.lara.ai/
+
+## Legal
+

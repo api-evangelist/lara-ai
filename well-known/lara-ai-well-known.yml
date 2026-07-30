@@ -1,0 +1,49 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of Lara AI hosts
+note: >-
+  Probed the standard /.well-known/ discovery surface across every Lara AI host
+  found during enrichment. Nothing real was returned, so no WellKnown or
+  SecurityTxt pointer is emitted in apis.yml. IMPORTANT: app.meetlara.ai is a
+  single-page application whose server answers EVERY path with a 200 and the
+  SPA index.html shell (content-type text/html) — including a deliberate
+  nonsense control path. Those 200s are soft 404s, not documents, and are
+  recorded as soft_404 below so a future re-run does not mistake them for hits.
+hosts:
+  - host: https://www.meetlara.ai
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+  - host: https://api.meetlara.ai
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+  - host: https://app.meetlara.ai
+    soft_404: true
+    soft_404_evidence: >-
+      GET /.well-known/this-path-does-not-exist-xyz123 also returns 200 with the
+      same text/html SPA shell, so a 200 on this host carries no information.
+    documents:
+      - {path: /.well-known/security.txt, status: 200, real: false}
+      - {path: /.well-known/openid-configuration, status: 200, real: false}
+      - {path: /.well-known/oauth-authorization-server, status: 200, real: false}
+      - {path: /.well-known/api-catalog, status: 200, real: false}
+      - {path: /.well-known/ai-plugin.json, status: 200, real: false}
+  - host: https://help.meetlara.ai
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+other_discovery:
+  - {url: 'https://www.meetlara.ai/llms.txt', status: 200, note: 'Real published llms.txt — captured verbatim in llms/lara-ai-llms.txt'}
+  - {url: 'https://www.meetlara.ai/robots.txt', status: 200}
+  - {url: 'https://www.meetlara.ai/sitemap.xml', status: 200}
+  - {url: 'https://www.meetlara.ai/openapi.json', status: 404}

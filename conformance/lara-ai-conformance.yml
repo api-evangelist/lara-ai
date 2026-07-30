@@ -1,0 +1,70 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  Live probes of api.meetlara.ai / www.meetlara.ai plus the published privacy
+  policy (https://meetlara.ai/privacidad.html) and help centre
+  (https://help.meetlara.ai/support/home).
+note: >-
+  Lara AI (legal entity SIGMA PEOPLE S.R.L., Argentina) publishes NO public API
+  program: no developer portal, no API reference, no OpenAPI, no SDKs and no
+  published authentication documentation were found. api.meetlara.ai resolves
+  and is a live production service, but it is the private backend for the
+  app.meetlara.ai dashboard — every probed path returns the same 404 JSON, so no
+  operation surface can be asserted without fabrication. The entries below are
+  therefore mostly honest negatives; they exist so a re-run can tell "not found"
+  apart from "not yet checked".
+standards:
+  - id: openapi
+    conforms: false
+    evidence: >-
+      No OpenAPI/Swagger document found. /openapi.json and /swagger.json 404 on
+      both www.meetlara.ai and api.meetlara.ai.
+  - id: oauth2
+    conforms: false
+    evidence: >-
+      No documented OAuth 2.0 surface. /.well-known/oauth-authorization-server
+      returns 404 on every real host.
+  - id: oidc
+    conforms: false
+    evidence: >-
+      No /.well-known/openid-configuration on any real host (the 200 on
+      app.meetlara.ai is an SPA soft 404 — see well-known/lara-ai-well-known.yml).
+  - id: rfc9457
+    conforms: false
+    evidence: >-
+      api.meetlara.ai returns a proprietary JSON error envelope
+      ({"code","message","context","origin"}) as application/json, not
+      application/problem+json. Observed on every probed path, e.g. GET / ->
+      404 {"code":"not_found","message":"Not Found","context":{},"origin":"dash:api:prd"}.
+  - id: graphql
+    conforms: false
+    evidence: /graphql returns the standard 404 envelope on api.meetlara.ai.
+  - id: asyncapi
+    conforms: false
+    evidence: >-
+      No AsyncAPI document and no published event/webhook catalogue found on the
+      marketing site or in the help centre.
+  - id: llms-txt
+    conforms: true
+    evidence: >-
+      Publishes a real, well-formed llms.txt at https://www.meetlara.ai/llms.txt
+      (H1 + blockquote summary + sectioned link lists). Captured verbatim in
+      llms/lara-ai-llms.txt.
+  - id: ar-ley-25326-data-protection
+    conforms: true
+    evidence: >-
+      Privacy policy states SIGMA PEOPLE S.R.L. handles personal information in
+      accordance with Argentina's Ley N° 25.326 de Protección de Datos
+      Personales, its implementing decree and the rules of the Dirección
+      Nacional de Protección de Datos Personales
+      (https://meetlara.ai/privacidad.html). This is a statutory-compliance
+      statement, NOT a certification programme — no SOC 2, ISO 27001, PCI or
+      HIPAA attestation is published, so no Compliance pointer is emitted.
+  - id: hsts
+    conforms: true
+    evidence: >-
+      meetlara.ai serves TLS 1.3 with HSTS max-age=63072000 (2 years). See
+      security/lara-ai-domain-security.yml.
+  - id: dnssec
+    conforms: false
+    evidence: meetlara.ai publishes no DNSSEC and no CAA records (probed 2026-07-19).

@@ -1,0 +1,42 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.meetlara.ai/
+note: >-
+  Lara AI's published integration surface, taken verbatim from the integrations
+  section of the marketing homepage (headings "Plataformas de RRHH" for the HR
+  platforms, and the rotating channel selector for the messaging channels).
+  These are PRODUCT integrations announced on the site — Lara AI publishes no
+  API reference, no connector documentation and no OpenAPI, so nothing here is
+  expressed as an Arazzo workflow and no operation-level detail is asserted.
+  Two further logos (Talana, Rankmi) ship in the site's integration asset
+  directory but are not labelled in the rendered copy, so they are recorded
+  separately as unconfirmed.
+channels:
+  note: >-
+    Conversational channels Lara AI's agent talks to employees through. Sourced
+    from the homepage channel rotator (assets/img/integraciones/*).
+  items:
+    - {name: WhatsApp, slug: whatsapp}
+    - {name: Microsoft Teams, slug: microsoft-teams, docs: 'https://help.meetlara.ai/support/home'}
+    - {name: Slack, slug: slack}
+    - {name: Google Chat, slug: google-chat}
+hr_platforms:
+  note: >-
+    HRIS / people-platform integrations listed under the homepage heading
+    "Plataformas de RRHH".
+  items:
+    - {name: SAP, slug: sap}
+    - {name: BambooHR, slug: bamboohr}
+    - {name: Oracle, slug: oracle}
+    - {name: Mandu, slug: mandu}
+    - {name: Rex+, slug: rex}
+    - {name: Humand, slug: humand}
+    - {name: Buk, slug: buk}
+unconfirmed:
+  note: >-
+    Logos present in https://www.meetlara.ai/assets/img/integraciones/ but not
+    labelled in the rendered homepage copy. Recorded as leads only — not
+    asserted as shipping integrations.
+  items:
+    - {name: Talana, slug: talana}
+    - {name: Rankmi, slug: rankmi}
